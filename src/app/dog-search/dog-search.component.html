@@ -1,0 +1,14 @@
+<div>
+    <input type="string" [(ngModel)]="searchName">
+
+</div>
+<div class="btn"><button (click)="search()">Search</button></div>
+
+  <div>
+    <a *ngIf="foundContent" [routerLink]="['/content', foundContent.id+'']">{{foundContent.dogName}}</a>
+  </div>
+
+  <div *ngIf="!foundContent">
+    <p>Error: Content not found</p>
+  </div>
+
